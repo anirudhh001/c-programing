@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    int notes[] = {500, 100, 50, 20, 10, 5, 2, 1};
+    int count[8] = {0};
+    for (int i = 0; i < 8; i++) {
+        count[i] = N / notes[i];
+        N = N % notes[i];
+    }
+    for (int i = 0; i < 8; i++) {
+        if (count[i] > 0) {
+            printf("%d: %d\n", notes[i], count[i]);
+        }
+    }
+    return 0;
+}
