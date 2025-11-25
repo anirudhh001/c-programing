@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <limits.h>
+int main() {
+    int N, num;
+    scanf("%d", &N);
+    int max_num = INT_MIN;
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &num);
+        if (num > max_num) {
+            max_num = num;
+        }
+    }
+    printf("%d", max_num);
+    return 0;
+}
