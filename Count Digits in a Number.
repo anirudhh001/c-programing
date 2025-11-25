@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    int count = 0;
+    int num = N;
+    if (num < 0) {
+        num = -num;
+    }
+    if (num == 0) {
+        count = 1;
+    } else {
+        while (num > 0) {
+            num = num / 10;
+            count++;
+        }
+    }
+    printf("%d", count);
+    return 0;
+}
